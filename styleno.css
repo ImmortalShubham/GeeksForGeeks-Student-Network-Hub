@@ -1,0 +1,495 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins'); /* Imports the 'Poppins' font from Google Fonts */
+
+* {
+  margin:0; /* Removes default margin from all elements */
+  padding: 0; /* Removes default padding from all elements */
+  box-sizing: border-box; /* Changes box model so padding/border are included in the element's width/height */
+  font-family: 'Poppins', sans-serif; /* Sets 'Poppins' as the default font for all elements */
+}
+
+body{
+  background: #1f242d; /* Sets a dark gray background color for the entire body */
+  color: #fff; /* Sets the default text color to white */
+}
+
+.header{
+  position: fixed; /* Keeps the header fixed at the top of the page, even when scrolling */
+  top: 0; /* Positions the header at the top of the viewport */
+  left: 0; /* Aligns the header to the left edge of the viewport */
+  margin-top: -10px; /* Moves the header slightly above its usual position, reducing the space */
+  width: 100%; /* Makes the header take up the full width of the viewport */
+  padding: 10px 8%; /* Adds padding: 10px on top/bottom and 8% on left/right for spacing */
+  background: rgb(59, 50, 52); /* Sets a medium-dark gray color as the header's background */
+  display: flex; /* Applies flexbox to arrange header items (like logo and navigation) */
+  justify-content: space-between; /* Spaces header items to either side, creating room between them */
+  align-items: center; /* Vertically centers the items within the header */
+  z-index: 100; /* Ensures the header stays on top of other elements on the page */
+} 
+
+
+.logo {
+  font-weight: 550; /* Sets a medium font weight for the logo text (though will be overridden below) */
+  color: #05e789; /* Sets the text color of the logo to a light green */
+  font-size: 55px; /* Sets the font size for the logo text to 55px, making it larger and prominent */
+  text-decoration: none; /* Removes any default underline or decoration from the logo text */
+  font-weight: 600; /* Overrides previous font weight with a slightly bolder weight */
+  cursor: default; /* Changes the cursor to default (arrow) when hovering over the logo (disables link hand cursor) */
+  opacity: 1; /* Sets the opacity to fully opaque (100% visible) */
+}
+
+.logo p {
+  margin-top: -13px; /* Moves the paragraph (subtext under the logo) upwards by 13px for closer alignment */
+  font-size: 10px; /* Sets a small font size (10px) for the subtext under the logo */
+  color: rgb(162, 106, 247); /* Sets the subtext color to a light purple */
+}
+
+.navbar a {
+  display: inline-block; /* Allows the anchor tags in the navbar to have padding and margins */
+  font-size: 18px; /* Sets the font size of the navbar links to 18px for readability */
+  color: #fff; /* Sets the text color of navbar links to white */
+  text-decoration: none; /* Removes any underline or decoration from the navbar links */
+  font-weight: 500; /* Applies a medium font weight to navbar links for slight emphasis */
+  margin-left: 35px; /* Adds 35px of space to the left of each navbar link, spacing them out */
+  transition: .2s; /* Smoothly animates property changes, like color, over 0.2 seconds */
+}
+
+.navbar a:hover, /* Targets the 'a' (anchor) tags inside .navbar when hovered over */
+.navbar a.active { /* Targets anchor tags with the 'active' class inside .navbar */
+  color: #0ef; /* Changes the color to a bright teal (#0ef) when hovered or active */
+}
+
+.home {
+  margin-top: 2.4rem; /* Adds a top margin of 2.4rem to create space above the .home section */
+  position: relative; /* Sets the positioning of .home as relative for possible absolute positioning of child elements */
+  width: 100%; /* Sets the width of the .home section to take up the full width of the viewport */
+  height: 110vh; /* Sets the height of the .home section to 110% of the viewport height */
+  display: flex; /* Applies a flex layout to arrange child elements in a row or column */
+  justify-content: space-between; /* Distributes space between child elements, pushing them to opposite ends */
+  align-items: center; /* Aligns child elements vertically at the center of the section */
+  padding: 20px 9% 0; /* Adds padding: 20px top, 9% on left and right, and 0 on the bottom */
+}
+
+.home-img img {
+  width: 32vw; /* Sets the width of the image to 32% of the viewport width */
+  height: 32vw; /* Sets the height of the image to match the width (32vw), keeping it square */
+  border: 2px solid rgb(86, 115, 149); /* Adds a 2px solid border with a medium blue-gray color */
+  border-radius: 50%; /* Rounds the image to a circular shape */
+  opacity: 1; /* Ensures the image is fully opaque */
+}
+
+.home-img {
+  margin-bottom: 19px; /* Adds a bottom margin of 19px to the container of the image */
+  margin-left: 50px; /* Adds a left margin of 50px to create space on the left */
+}
+
+.home-container {
+  max-width: 550px; /* Limits the width of the container to a maximum of 550px */
+  padding: 5px 0% 16px; /* Adds padding: 5px top, 0% on left and right, and 16px on bottom */
+  margin: 9px 5px 3px 0px; /* Adds a margin: 9px top, 5px right, 3px bottom, and 0px left */
+}
+
+.home-container h3 {
+  font-size: 20px; /* Sets the font size of <h3> elements inside .home-container to 20px */
+  font-weight: 600; /* Makes the font weight bold (600) */
+  opacity: 1; /* Ensures full opacity for clear visibility */
+}
+
+.home-container h3:nth-of-type(2) {
+  margin-bottom: 20px; /* Adds 20px margin below the second <h3> element within .home-container to create spacing */
+}
+
+span {
+  color: aqua; /* Sets the color of all <span> elements to aqua */
+}
+
+.home-container h1 div {
+  color: rgb(215, 13, 225); /* Colors text within <div> elements inside <h1> in .home-container to a bright pink-purple */
+  font-size: 20px; /* Sets the font size for <div> within <h1> to 20px */
+  font-weight: 700; /* Makes the text very bold (700) */
+}
+
+.home-container h1 {
+  font-size: 40px; /* Sets the font size of the main <h1> in .home-container to 40px for prominence */
+  color: #0cf4d1; /* Colors the <h1> text in a bright teal shade */
+  font-weight: 700; /* Applies a very bold weight (700) to the <h1> text */
+  opacity: 1; /* Ensures full opacity for clear visibility */
+}
+
+.home-container p {
+  font-size: 15px; /* Sets font size of <p> elements in .home-container to 15px */
+  font-weight: 500; /* Gives the <p> text a medium-bold weight (500) */
+  margin-top: 3rem; /* Adds a top margin of 3rem to create space above the paragraph */
+  font-style: italic; /* Applies an italic style to the paragraph text */
+  font-family: 'Courier New', Courier, monospace; /* Changes font family to a monospaced style, providing a distinct look */
+  opacity: 1; /* Ensures full opacity for clear visibility */
+}
+
+
+.social-media a {
+  display: inline-flex; /* Uses inline-flex to arrange items inline and enable alignment properties */
+  justify-content: center; /* Centers content horizontally within each social media link */
+  align-items: center; /* Centers content vertically within each social media link */
+  width: 40px; /* Sets the width of each social media link to 40px */
+  height: 40px; /* Sets the height of each social media link to 40px */
+  background: transparent; /* Makes the background transparent by default */
+  border: 2px solid #0ef; /* Adds a 2px solid border in a teal color (#0ef) */
+  border-radius: 50%; /* Rounds the corners to form a circle */
+  font-size: 20px; /* Sets the font size for icons or text within the link to 20px */
+  color: #0ef; /* Colors the link text or icons in teal (#0ef) */
+  text-decoration: none; /* Removes the default underline decoration for links */
+  margin: 33px 15px 30px 0; /* Adds a top margin of 33px, right margin of 15px, bottom margin of 30px, and no left margin */
+  transition: 0.9s ease; /* Smooths transition effects with a 0.9-second duration */
+  opacity: 1; /* Ensures full opacity for clear visibility */
+}
+
+.social-media a:hover {
+  background-color: #0ef; /* Changes background to teal on hover for visual effect */
+  color: #1f242d; /* Changes text color to dark gray (#1f242d) on hover for contrast */
+  box-shadow: 0 0 15px #0ef; /* Adds a 15px glow effect in teal around the link when hovered */
+}
+
+.bttn {
+  display: inline-block; /* Makes the button inline-block to respect dimensions and spacing */
+  padding: 12px 28px; /* Adds padding of 12px vertically and 28px horizontally for comfortable button size */
+  background: #0ef; /* Sets the button background color to teal (#0ef) */
+  border-radius: 30px; /* Rounds the corners with a 30px radius to make a pill shape */
+  box-shadow: 0 0 10px #0ef; /* Adds a 10px glow effect in teal around the button */
+  font-size: 18px; /* Sets the font size within the button to 18px */
+  color: #2d3543; /* Colors the button text in a dark gray (#2d3543) for contrast against the background */
+  letter-spacing: 0.8px; /* Adds 0.8px spacing between letters for readability */
+  text-decoration: none; /* Removes default underline decoration for links */
+  font-weight: 600; /* Makes the button text slightly bold */
+  opacity: 1; /* Ensures full opacity for clear visibility */
+}
+
+
+.bttn:hover {
+  box-shadow: none; /* Removes the shadow effect on the button when hovered */
+}
+
+/* About Section */
+.about {
+  padding: 8rem 5% 9rem; /* Adds padding: 8rem top, 5% left/right, 9rem bottom for spacing within the section */
+  justify-content: space-between; /* Distributes child elements evenly with space in between */
+  align-items: center; /* Vertically centers child elements within the section */
+  gap: 2.5rem; /* Adds a 2.5rem gap between items in the section for spacing */
+  background: #393b3e; /* Sets a dark gray background color for the About section */
+  margin-top: 9rem; /* Adds a top margin of 9rem to create spacing above the section */
+}
+
+.heading {
+  text-align: left; /* Aligns the heading text to the left */
+  font-size: 1.9rem; /* Sets the font size of the heading to 1.9rem */
+  margin: 2rem auto 2rem 1rem; /* Adds top and bottom margin of 2rem, left margin of 1rem, auto centers on larger screens */
+}
+
+.para_btn {
+  margin: -1rem 1rem; /* Adds a negative top margin to move the element up slightly, with left and right margin of 1rem */
+}
+
+.about_container p {
+  font-size: 0.8rem; /* Sets a smaller font size for paragraphs within the About section */
+  margin: 0.9rem 0 1.3rem; /* Adds top margin of 0.9rem and bottom margin of 1.3rem, no side margins */
+  font-style: italic; /* Italicizes the paragraph text for emphasis or style */
+}
+
+/* Event Section */
+#events {
+  background-color: #263337; /* Sets a dark teal background color for the events section */
+  margin: 5rem 0 0.4rem; /* Adds 5rem margin above and 0.4rem below the section for spacing */
+  padding-top: 10rem; /* Adds top padding of 10rem within the section */
+}
+
+#events h2 {
+  color: #06d3b5; /* Sets the heading color to light teal */
+  font-size: 22px; /* Sets font size for the heading */
+  font-weight: 700; /* Makes the font bold */
+  margin-bottom: 30px; /* Adds bottom margin for spacing below the heading */
+  text-align: center; /* Centers the heading text */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Uses a sans-serif font stack for the heading */
+}
+
+.event {
+  background-color: #373737; /* Sets a dark gray background for individual event blocks */
+  box-shadow: 0px 2px 10px rgba(13, 141, 90, 0.4); /* Adds a soft green shadow below the event block */
+  padding: 15px; /* Adds padding inside each event block for spacing */
+  margin-bottom: 40px; /* Adds space below each event block */
+  text-align: left; /* Left-aligns text within the event block */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Adds smooth transition effects for hover states */
+}
+
+.event:hover {
+  background-color: #444; /* Changes the background color to a lighter gray when hovered */
+  box-shadow: 0 4px 15px rgba(13, 141, 90, 0.3); /* Increases shadow size on hover for emphasis */
+  transform: translateY(-5px); /* Moves the block up by 5px on hover for a 3D effect */
+}
+
+.event h3 {
+  color: #ffffff; /* Sets the event title color to white */
+  font-size: 19px; /* Sets the font size for the event title */
+  font-weight: 700; /* Makes the event title bold */
+  margin-bottom: 10px; /* Adds bottom margin for spacing below the title */
+}
+
+.event p {
+  color: #f0ebeb; /* Sets the paragraph color to a soft white */
+  font-size: 14px; /* Sets font size for paragraphs within the event block */
+  line-height: 1.5; /* Sets line height for readability */
+  margin-bottom: 10px; /* Adds spacing below each paragraph */
+  font-style: italic; /* Italicizes the paragraph text */
+}
+
+/* Responsive Design for Medium Screens */
+@media screen and (min-width: 768px) { /* Applies the following styles to screens 768px and wider */
+  #events {
+    padding: 10rem 3rem 5rem; /* Adds padding: 10rem top, 3rem sides, 5rem bottom for the events section */
+  }
+
+  .event {
+    display: inline-block; /* Aligns event blocks horizontally for wider screens */
+    max-width: 30%; /* Limits event block width to 30% of the container */
+    vertical-align: top; /* Aligns the top of each block when displayed inline */
+  }
+
+  .event:not(:last-child) {
+    margin-right: 5%; /* Adds right margin to each event block except the last one */
+  }
+}
+
+/* Resources Section */
+#resources {
+  background-color: #1f1f1f; /* Sets a very dark gray background for the resources section */
+  color: #fff; /* Sets default text color to white */
+  padding: 10rem 0; /* Adds 10rem padding on top and bottom of the section */
+}
+
+#resources h2 {
+  text-align: center; /* Centers the section title */
+  font-size: 2rem; /* Sets font size for the section title */
+  font-weight: 700; /* Makes the title bold */
+  color: rgb(18, 121, 240); /* Sets the title color to blue */
+  margin-bottom: 20px; /* Adds bottom margin for spacing below the title */
+}
+
+#resources p {
+  text-align: center; /* Centers the paragraph text */
+  font-size: 1.2rem; /* Sets font size for the introductory paragraph */
+  font-style: italic; /* Italicizes the paragraph text */
+  margin-bottom: 50px; /* Adds bottom margin for spacing below the paragraph */
+}
+
+#resources ul {
+  list-style: none; /* Removes default bullet points for the list */
+  margin: 0; /* Removes default margin */
+  padding: 0; /* Removes default padding */
+  display: flex; /* Displays list items in a row */
+  flex-wrap: wrap; /* Allows items to wrap onto the next line if they exceed container width */
+  justify-content: center; /* Centers the list items within the container */
+}
+
+#resources li {
+  margin: 10px; /* Adds spacing around each list item */
+  display: flex; /* Aligns content horizontally within the list item */
+  justify-content: center; /* Centers content within each list item */
+  align-items: center; /* Centers content vertically within each list item */
+}
+
+#resources li a {
+  color: #fff; /* Sets the link text color to white */
+  text-decoration: none; /* Removes the underline from links */
+  font-size: 1.2rem; /* Sets the font size for the link text */
+  padding: 10px; /* Adds padding inside the link area for spacing */
+  border: 1px solid #fff; /* Adds a 1px solid white border around the link */
+  border-radius: 5px; /* Rounds the corners of the link border for a softer look */
+  transition: all 0.3s ease; /* Adds a smooth transition effect for all properties on hover */
+}
+
+#resources li a:hover {
+  background-color: #fff; /* Changes the background color to white on hover */
+  color: #000; /* Changes the text color to black on hover for contrast */
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3); /* Adds a soft white shadow around the link on hover */
+  transform: scale(1.05); /* Scales the link slightly larger on hover for emphasis */
+}
+
+/* Contact Section */
+#contact {
+  background-color: #1f1f1f; /* Sets a dark gray background color for the contact section */
+  padding: 10rem 0; /* Adds 10rem padding on top and bottom of the section for spacing */
+  background: #353937; /* Overrides the previous background color with a slightly lighter gray */
+}
+
+
+#contact h2 {
+  text-align: center; /* Centers the heading text */
+  font-size: 2.5rem; /* Sets the font size of the heading to 2.5rem */
+  color: #8d12f2; /* Sets the text color to a purple shade */
+  margin-bottom: 20px; /* Adds space below the heading */
+}
+
+.contact-form {
+  max-width: 40%; /* Sets the maximum width of the form to 40% of the container */
+  margin: 0 auto; /* Centers the form horizontally */
+  align-items: center; /* Aligns form elements in the center (for flex contexts) */
+}
+
+.contact-form form {
+  display: flex; /* Uses flexbox layout */
+  flex-direction: column; /* Arranges form items in a vertical column */
+  align-items: center; /* Centers items horizontally */
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%; /* Full-width for text inputs and textarea */
+  padding: 10px; /* Adds padding inside inputs */
+  margin-bottom: 20px; /* Space below each input */
+  border-radius: 5px; /* Rounds the corners */
+  border: none; /* Removes border */
+}
+
+.contact-form textarea {
+  height: 150px; /* Sets a fixed height for the textarea */
+}
+
+.contact-form button[type="submit"] {
+  padding: 10px 20px; /* Sets padding inside the button */
+  background-color: #fff; /* Sets background color to white */
+  color: #000; /* Sets button text color to black */
+  border: none; /* Removes button border */
+  border-radius: 5px; /* Rounds button corners */
+  font-size: 1.2rem; /* Sets font size */
+  cursor: pointer; /* Changes cursor to pointer on hover */
+  transition: all 0.3s ease; /* Smooth transition effect on hover */
+}
+
+.contact-form button[type="submit"]:hover {
+  background-color: #085939; /* Changes background color on hover */
+  color: #fff; /* Sets text color to white on hover */
+  transform: scale(1.1); /* Slightly increases button size on hover */
+}
+
+/* Footer Section */
+footer {
+  background-color: #282c34; /* Dark background color for footer */
+  color: #ffffff; /* Sets footer text color to white */
+  padding: 40px 20px; /* Padding around the footer */
+  text-align: center; /* Centers text */
+}
+
+.footer-container {
+  display: flex; /* Uses flexbox for layout */
+  justify-content: space-around; /* Spaces items evenly */
+  flex-wrap: wrap; /* Allows items to wrap to new lines */
+  margin-bottom: 20px; /* Space below the footer container */
+}
+
+.footer-content, .footer-links, .footer-social {
+  flex: 1; /* Each takes equal space */
+  margin: 10px; /* Space around each item */
+  min-width: 200px; /* Minimum width for responsiveness */
+}
+
+.footer-content h3, .footer-links h3, .footer-social h3 {
+  margin-bottom: 10px; /* Space below headings */
+}
+
+.footer-links ul {
+  list-style: none; /* Removes bullets */
+  padding: 0; /* Removes padding */
+}
+
+.footer-links ul li {
+  margin: 5px 0; /* Vertical space between links */
+}
+
+.footer-links ul li a {
+  color: #ffffff; /* White text color for links */
+  text-decoration: none; /* Removes underline */
+}
+
+.footer-links ul li a:hover {
+  text-decoration: underline; /* Underlines on hover */
+}
+
+.footer-social {
+  text-align: center; /* Centers social icons */
+}
+
+.footer-social .social-icon {
+  margin: 0 10px; /* Space between icons */
+  color: #ffffff; /* Sets icon color to white */
+  font-size: 24px; /* Sets icon size */
+}
+
+.footer-bottom {
+  background-color: #1f2024; /* Darker footer background color */
+  padding: 10px 0; /* Padding on top and bottom */
+  margin-top: 20px; /* Space above the bottom footer */
+}
+
+.footer-bottom p {
+  margin: 0; /* Removes default margin */
+}
+
+/* Login Section Styling */
+.login-section {
+  display: flex; /* Uses flexbox layout */
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  min-height: 100vh; /* Full viewport height */
+  background-color: #f0f8f5; /* Light green background color */
+}
+
+.login-container {
+  width: 320px; /* Sets container width */
+  padding: 2rem; /* Padding inside container */
+  background: #ffffff; /* White background */
+  box-shadow: 0px 4px 15px rgba(0, 128, 0, 0.2); /* Soft green shadow */
+  border-radius: 8px; /* Rounds container corners */
+  text-align: center; /* Centers text */
+}
+
+.login-container h2 {
+  margin-bottom: 1.5rem; /* Space below heading */
+  font-size: 24px; /* Sets font size */
+  color: #0a9d58; /* Sets color to green */
+}
+
+.login-form label {
+  display: block; /* Each label on a new line */
+  margin: 0.5rem 0 0.25rem; /* Space above and below labels */
+  color: #555; /* Gray label color */
+  font-weight: 500; /* Sets font weight */
+}
+
+.login-form input {
+  width: 100%; /* Full-width input */
+  padding: 0.75rem; /* Padding inside input */
+  margin-bottom: 1rem; /* Space below input */
+  border: 1px solid #d1e7dd; /* Light green border */
+  border-radius: 4px; /* Rounds input corners */
+  font-size: 16px; /* Sets font size */
+}
+
+.login-form input:focus {
+  border-color: #0a9d58; /* Dark green border on focus */
+  outline: none; /* Removes outline */
+  box-shadow: 0 0 5px rgba(10, 157, 88, 0.2); /* Soft green shadow on focus */
+}
+
+.login-form button {
+  width: 100%; /* Full-width button */
+  padding: 0.75rem; /* Padding inside button */
+  font-size: 16px; /* Sets font size */
+  color: #fff; /* White button text */
+  background-color: #0a9d58; /* Green button background */
+  border: none; /* Removes border */
+  border-radius: 4px; /* Rounds button corners */
+  cursor: pointer; /* Changes cursor on hover */
+  transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.login-form button:hover {
+  background-color: #087a44; /* Darker green on hover */
+}
